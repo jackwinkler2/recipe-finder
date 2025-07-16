@@ -1,0 +1,29 @@
+.table-container {
+  height: auto;                
+  margin: 60px;              
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: rgba(0, 0, 0, 0.80); 
+  padding: 1rem;
+}
+
+.recipe-table {
+  width: 100%;
+  border-collapse: collapse;
+  color:white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-table th,
+.recipe-table td {
+  padding: 2px 16px;
+  text-align: left;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}

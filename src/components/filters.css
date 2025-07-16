@@ -1,0 +1,25 @@
+.filters-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.filter-box {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  min-width: 200px;
+}
+
+.filter-box input[type="number"],
+.filter-box input[type="range"] {
+  margin-top: 0.5rem;
+}
