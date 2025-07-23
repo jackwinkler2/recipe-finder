@@ -1,8 +1,8 @@
-# Web Development Project 5 - *Recipe Finder*
+# Web Development Project 6 - *Recipe Finder*
 
 Submitted by: **Jack Winkler**
 
-This web app: **This app connects to the spoonacular API to find recipes for the user, and allows them to filter by servings and prep time.**
+This web app: **This app connects to the spoonacular API to find recipes for the user, and allows them to filter by servings and prep time. **
 
 Time spent: **8** hours spent in total
 
@@ -10,32 +10,22 @@ Time spent: **8** hours spent in total
 
 The following **required** functionality is completed:
 
-- [x] **The site has a dashboard displaying a list of data fetched using an API call**
-  - The dashboard should display at least 10 unique items, one per row
-  - The dashboard includes at least two features in each row
-- [x] **`useEffect` React hook and `async`/`await` are used**
-- [x] **The app dashboard includes at least three summary statistics about the data** 
-  - The app dashboard includes at least three summary statistics about the data, such as:
-    - *Mode Cuisine, Average Minutes, Max Servings*
-- [x] **A search bar allows the user to search for an item in the fetched data**
-  - The search bar **correctly** filters items in the list, only displaying items matching the search query
-  - The list of results dynamically updates as the user types into the search bar
-- [x] **An additional filter allows the user to restrict displayed items by specified categories**
-  - The filter restricts items in the list using a **different attribute** than the search bar 
-  - The filter **correctly** filters items in the list, only displaying items matching the filter attribute in the dashboard
-  - The dashboard list dynamically updates as the user adjusts the filter
-
-The following **optional** features are implemented:
-
-- [x] Multiple filters can be applied simultaneously
-- [x] Filters use different input types
-  - as a slider
+- [x] **Clicking on an item in the list view displays more details about it**
+  - Clicking on an item in the dashboard list navigates to a detail view for that item
+  - Detail view includes extra information about the item not included in the dashboard view
+  - The same sidebar is displayed in detail view as in dashboard view
+  - *To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.*
+- [x] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
+  -  *To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.*
+- [x] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+  - At least two charts should be incorporated into the dashboard view of the site
+  - Each chart should describe a different aspect of the dataset
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src="src/assets/WEB_102_Proj5_Jack_Winkler.gif" alt="Video Walkthrough" width="500" />
+<img src="src/assets/WEB_102_Proj6_Jack_Winkler.gif" alt="Video Walkthrough" width="500" />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with screenToGif

@@ -1,4 +1,5 @@
 import "./datalist.css"
+import { Link } from "react-router-dom";
 
 const DataList = ({filteredRecipes}) => {
   return (
@@ -11,6 +12,7 @@ const DataList = ({filteredRecipes}) => {
             <th>Servings</th>
             <th>Minutes</th>
             <th>Image</th>
+            <th>Details</th>
           </tr>
         </thead>
         <tbody>
@@ -27,6 +29,11 @@ const DataList = ({filteredRecipes}) => {
                     alt={"image"}
                     className="thumbnail"
                   />
+                </td>
+                <td>
+                  <Link to={`/recipe/${recipe.id}`} state={{ recipe }}>
+                    <button className="details-btn">View</button>
+                  </Link>
                 </td>
               </tr>
             )

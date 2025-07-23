@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import './App.css'
-import DataList from './components/datalist'
-import SumStats from "./components/sumStats"
-import Filters from "./components/filters"
+import RecipeDetails from "./components/recipeDetails"
+import HomePage from "./components/Homepage"
+import dishesBarChart from './components/barChart'
 
 function App() {
   const [recipes, setRecipes] = useState([])
@@ -46,17 +47,34 @@ function App() {
   })
 
   return (
-    <>
-      <div className="page-wrapper">
-        <h1 className="big-header">
-          Recipe Finder
-        </h1>
-        <Filters recipes={recipes} onFilterChange={handleFilterChange}/>
-        <SumStats recipes={recipes} />
-        <DataList filteredRecipes={filteredRecipes} />
+    <Router>
+      <div className="app-container">
+        <aside className="sidebar">
+          <h2>Recipe Finder</h2>
+          <Link to="/">
+            <button className="sidebar-button">Dashboard</button>
+          </Link>
+        </aside>
+
+        <main className="main-content">
+          <h1 className="big-header">Recipe Finder</h1>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <HomePage
+                  recipes={recipes}
+                  handleFilterChange={handleFilterChange}
+                  filteredRecipes={filteredRecipes}
+                />
+              }
+            />
+            <Route path="/recipe/:id" element={<RecipeDetails />} />
+          </Routes>
+        </main>
       </div>
-    </>
-  )
+    </Router>
+  );
 }
 
 export default App

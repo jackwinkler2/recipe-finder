@@ -2,7 +2,8 @@ import { useState, useEffect } from "react"
 import "./filters.css"
 
 const Filters = ({ recipes, onFilterChange }) => {
-  const [servings, setServings] = useState("")
+  const [servingsInput, setServingsInput] = useState("")     // 👈 used while typing
+  const [servings, setServings] = useState("")                // 👈 active filter state
   const [maxMinutes, setMaxMinutes] = useState(0)
   const [minMinutes, setMinMinutes] = useState(0)
   const [maxAllowedMinutes, setMaxAllowedMinutes] = useState(0)
@@ -17,10 +18,16 @@ const Filters = ({ recipes, onFilterChange }) => {
     }
   }, [recipes])
 
-  // Notify parent when either filter changes
+  // Notify parent when slider (maxMinutes) changes
   useEffect(() => {
     onFilterChange({ servings, maxMinutes })
-  }, [servings, maxMinutes])
+  }, [maxMinutes])
+
+  // Notify parent when "Search" is clicked
+  const handleSearchClick = () => {
+    setServings(servingsInput)
+    onFilterChange({ servings: servingsInput, maxMinutes })
+  }
 
   return (
     <div className="filters-container">
@@ -28,10 +35,13 @@ const Filters = ({ recipes, onFilterChange }) => {
         <label>Filter by Servings:</label>
         <input
           type="number"
-          value={servings}
-          onChange={(e) => setServings(e.target.value)}
+          value={servingsInput}
+          onChange={(e) => setServingsInput(e.target.value)}
           placeholder="e.g. 4"
         />
+        <button onClick={handleSearchClick} style={{ marginLeft: '8px' , marginTop: '8px'}}>
+          Search
+        </button>
       </div>
 
       <div className="filter-box">
