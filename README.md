@@ -25,7 +25,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-<img src="src/assets/WEB_102_Proj6_Jack_Winkler.gif" alt="Video Walkthrough" width="500" />
+<img src="src/assets/WEB_102_Proj5_Jack_Winkler.gif" alt="Video Walkthrough" width="500" />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with screenToGif
